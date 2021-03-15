@@ -1,0 +1,1 @@
+cargo watch -s 'cargo doc && browser-sync start --ss C:/Users/ahala/.cargo/build_cache/doc/forge_server -s C:/Users/ahala/.cargo/build_cache/doc --directory --no-open'

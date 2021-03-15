@@ -16,7 +16,8 @@ env_logger = "0.8.3"
 futures-util = "0.3.13"
 prost = "0.7"
 prost-types = "0.7"
-rusqlite = "0.24.2"
+rusqlite = { version = "0.24.2", features = ["bundled"] }
+tungstenite = "0.13.0"
 
 [build-dependencies]
 anyhow = "1.0.38"

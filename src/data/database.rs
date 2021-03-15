@@ -18,8 +18,10 @@ impl Database {
         let forge_dir = documents_dir.join("forge");
         let database_file = forge_dir.join("data.db");
 
-        let connection = Connection::open(&database_file)
-            .context(format!("failed to open the database at {}", database_file))?;
+        let connection = Connection::open(&database_file).context(format!(
+            "failed to open the database at {:?}",
+            database_file
+        ))?;
 
         Ok(Database {
             path: database_file,

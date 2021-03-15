@@ -1,9 +1,6 @@
-use std::{env, io::Error};
-
-use futures_util::StreamExt;
-use log::info;
+use anyhow::Result;
 use server::Server;
-use tokio::net::{TcpListener, TcpStream};
+use std::env;
 
 pub mod data;
 pub mod handlers;
@@ -11,7 +8,7 @@ pub mod protocol;
 pub mod server;
 
 #[tokio::main]
-async fn main() -> Result<(), Error> {
+async fn main() -> Result<()> {
     let _ = env_logger::try_init();
     let addr = env::args()
         .nth(1)

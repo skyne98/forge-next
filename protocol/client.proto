@@ -2,5 +2,5 @@ syntax = "proto3";
 package client_protocol;
 
 message Register {
-    
+    string name = 1;
 }

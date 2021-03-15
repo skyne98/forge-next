@@ -7,5 +7,8 @@
 
 const Register$json = const {
   '1': 'Register',
+  '2': const [
+    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
 };
 
